@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+@import 'custom';
+
+
+.app{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+svg{
+    color: $blanco;
+    font-size: 1.2rem !important;    
+    margin: 0 1rem;  
+}

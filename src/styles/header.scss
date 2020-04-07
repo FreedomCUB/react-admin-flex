@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'mixins';
+
+
+
+.header {
+    background-color: $primario;
+    color: $blanco;
+    display: flex;
+}
+.nombre-sitio {
+    background-color: $secundario;
+    display: flex;
+    padding: 0 1rem;
+    flex: 0 0 5rem;
+    @include media($desktop){
+        flex : 0 0 20rem;
+    }
+}
+
+.menu-izq {    
+    cursor: pointer;
+    align-self: center;
+    
+}
+
+.barra{
+    display: flex;    
+    flex: 1;
+    justify-content: space-between;
+}
+
+.menu-derch{
+    display: flex;  
+    align-items: center; 
+    font-weight: 700;
+}
+
+.caja {
+    padding: 0 1rem;  
+    height: 100%;      
+    &:hover {
+        background-color:  darken($primario, 5);
+    }
+}
+
+.caja a {
+    height: 100%;
+    color: $blanco;
+    text-decoration: none;
+    display: flex;
+    align-items: center;  
+    
+    span {
+        background-color: $terciario;
+        padding: .5rem;
+        margin-left: .5rem;
+        border-radius: 50%;
+    }
+}
+
+.escritorio {
+    display: none;
+}
+@include media($desktop){
+    .movil {
+        display: none;
+    }  
+    .escritorio {
+        display: block;
+    }
+
+}

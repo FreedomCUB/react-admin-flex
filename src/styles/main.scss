@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+
+
+
+.cont-principal {
+    flex: 1;
+    background-color: $gris;
+    display: flex;
+}

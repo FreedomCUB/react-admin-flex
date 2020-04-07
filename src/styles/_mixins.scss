@@ -1,0 +1,29 @@
+
+/** Media Queries **/
+@mixin media ($device) {
+    @media only screen and (min-width: #{$device}) {
+        @content;
+    }
+}
+
+@mixin boton($color) {
+    background-color: $color;
+    padding: .5rem 1rem;
+    display: block;
+    text-align: center;
+    color: $blanco;
+    text-decoration: none;
+    transition: background-color .3s ease;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color, 10);
+    }
+}
+
+@mixin box-sizing($box-model) {
+            box-sizing: $box-model;
+}
+@mixin gradiente($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
