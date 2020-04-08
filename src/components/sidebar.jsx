@@ -6,9 +6,9 @@ import '../styles/sidebar.scss'
 import Ul from './ulmenu'
 
 
-const Sidebar = () => {
+const Sidebar = React.forwardRef((props, ref) => {
     return (
-        <aside className="sidebar">
+        <aside className="sidebar" ref={ref}>
             <div className="usuario">
                 <img src={userImg} alt="" />
                 <p>Bienvenid@: <span>Admin</span></p>
@@ -66,6 +66,6 @@ const Sidebar = () => {
             </div>
         </aside>
     );
-}
+})
 
 export default Sidebar;

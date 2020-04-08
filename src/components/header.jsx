@@ -4,19 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight, faCommentAlt, faBell } from "@fortawesome/free-solid-svg-icons";
 
 
-const Header = () => {
+const Header = ({asideRef}) => {
 
     const [visible, setVisible] = useState(true)
-
+    
     const menuOnClick = () => {
-        setVisible(!visible)
-       const menu = document.querySelector('.sidebar')
+        setVisible(!visible)       
         if (visible) {
-            menu.classList.add('no-menu')            
+            asideRef.current.className= 'sidebar no-menu'           
         }else{
-            menu.classList.remove('no-menu')
+            asideRef.current.className= 'sidebar'
         }
-
     }
 
     return (
